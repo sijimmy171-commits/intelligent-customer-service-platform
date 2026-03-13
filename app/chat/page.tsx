@@ -368,7 +368,7 @@ export default function ChatPage() {
                   开始新的对话
                 </h3>
                 <p className="text-slate-500">
-                  点击左侧"开启新对话"按钮开始咨询
+                  点击左侧&quot;开启新对话&quot;按钮开始咨询
                 </p>
               </div>
             </div>

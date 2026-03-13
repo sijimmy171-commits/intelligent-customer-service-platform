@@ -27,7 +27,7 @@ export const Footer = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            Let's build the
+            Let&apos;s build the
             <br />
             <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               future together.
@@ -35,7 +35,7 @@ export const Footer = () => {
           </h2>
 
           <p className="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">
-            Looking for an AI Product Manager who can turn ideas into reality with style and speed? Let's connect.
+            Looking for an AI Product Manager who can turn ideas into reality with style and speed? Let&apos;s connect.
           </p>
 
           <motion.button

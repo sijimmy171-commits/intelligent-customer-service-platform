@@ -213,7 +213,7 @@ export default function ContractReviewPage() {
                   <FileText className="w-10 h-10 text-slate-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-300 mb-2">等待审查</h3>
-                <p className="text-slate-500">在左侧输入合同文本后点击"开始审查"</p>
+                <p className="text-slate-500">在左侧输入合同文本后点击&quot;开始审查&quot;</p>
               </div>
             )}
 

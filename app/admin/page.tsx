@@ -386,7 +386,7 @@ export default function AdminPage() {
                     {knowledgeBases.length === 0 && (
                       <tr>
                         <td colSpan={5} className="px-6 py-12 text-center text-slate-500">
-                          暂无知识库，点击"新建知识库"创建
+                          暂无知识库，点击&quot;新建知识库&quot;创建
                         </td>
                       </tr>
                     )}
@@ -511,6 +511,31 @@ function KnowledgeBaseDetail({
   onUpdate: () => void
 }) {
   const [activeFilter, setActiveFilter] = useState<'all' | 'processing' | 'failed'>('all')
+
+  const getDocumentStatusBadge = (status: string) => {
+    switch (status) {
+      case 'indexed':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium bg-green-50 text-green-600 border border-green-100">
+            已索引 (Indexed)
+          </span>
+        )
+      case 'processing':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100">
+            处理中 (Processing)
+          </span>
+        )
+      case 'failed':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium bg-red-50 text-red-600 border border-red-100">
+            索引失败 (Failed)
+          </span>
+        )
+      default:
+        return null
+    }
+  }
 
   const filteredDocs = documents.filter(d => {
     if (activeFilter === 'all') return true

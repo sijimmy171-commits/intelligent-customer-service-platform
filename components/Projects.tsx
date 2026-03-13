@@ -3,7 +3,13 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, MousePointerClick, Image, Code, Terminal } from 'lucide-react'
 
-const projects = [
+const projects: {
+  title: string
+  description: string
+  tags: string[]
+  icon: any
+  size: 'large' | 'small'
+}[] = [
   {
     title: 'AI Design Studio',
     description: 'An AI-powered design tool that generates UI components from natural language descriptions.',
