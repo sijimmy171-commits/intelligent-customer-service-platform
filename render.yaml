@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: smart-customer-service-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: smart-customer-service-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ZHIPU_API_KEY
+        value: 74c6860477614d52b82d4507bccf193b.1uhK8u4bhpNuOCWh
+      - key: FRONTEND_URL
+        value: https://smart-customer-service.netlify.app
+
+databases:
+  - name: smart-customer-service-db
+    databaseName: customer_service
+    user: customer_service
+    plan: free
